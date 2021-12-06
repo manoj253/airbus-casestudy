@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
         echo 'testing'
       }
@@ -10,6 +10,7 @@ pipeline {
   }
   environment {
     ECR_ID = '142198642907.dkr.ecr.ap-south-1.amazonaws.com'
-    ECR_CREDENTIALS = credentials('ecr-credentials')
+    CALCULATION_SERVICE_IMAGE = '\'manojv2-casestudy-calculation-service\''
+    ECR_CREDENTIALS = 'credentials(\'ecr-credentials\')'
   }
 }
