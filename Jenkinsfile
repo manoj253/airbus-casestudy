@@ -4,6 +4,7 @@ pipeline {
     stage('error') {
       steps {
         echo 'testing'
+        sh 'pwd'
       }
     }
 
